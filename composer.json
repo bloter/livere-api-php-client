@@ -1,0 +1,13 @@
+{
+    "name": "livere/livere-php-apiclient",
+    "type": "library",
+    "description": "Livere APIs Client Library for PHP",
+    "keywords": ["livere"],
+    "license": "Apache 2.0",
+    "require": {
+        "php": ">=5.2.1"
+    },
+    "autoload": {
+        "files": ["src/Livere/autoload.php"]
+    }
+}
