@@ -36,13 +36,12 @@ class Livere_Http_REST
      */
     public static function execute(Livere_Client $client, Livere_Http_Request $req)
     {
-        $runner = new Livere_Task_Runner($client, sprintf('%s %s', $req->getRequestMethod(), $req->getUrl()), array(
-            get_class(),
-            'doExecute'
-        ), array(
+        $runner = new Livere_Task_Runner(
             $client,
-            $req
-        ));
+            sprintf('%s %s', $req->getRequestMethod(), $req->getUrl()),
+            array(get_class(), 'doExecute'),
+            array($client, $req)
+        );
         return $runner->run();
     }
 
